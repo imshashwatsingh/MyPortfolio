@@ -61,10 +61,10 @@ const services = [
     title: "Backend Developer",
     icon: hero,
   },
-  {
-    title: "Drummer",
-    icon: drums,
-  },
+  // {
+  //   title: "Drummer",
+  //   icon: drums,
+  // },
   // {
   //   title: "Technical Writer",
   //   icon: writer,
