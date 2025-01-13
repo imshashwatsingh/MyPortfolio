@@ -65,14 +65,14 @@ const services = [
     title: "Drummer",
     icon: drums,
   },
-  {
-    title: "Technical Writer",
-    icon: writer,
-  },
-  {
-    title: "Teacher",
-    icon: backend,
-  },
+  // {
+  //   title: "Technical Writer",
+  //   icon: writer,
+  // },
+  // {
+  //   title: "Teacher",
+  //   icon: backend,
+  // },
 ];
 
 const technologies = [
