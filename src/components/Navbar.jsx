@@ -13,7 +13,7 @@ const Navbar = () => {
     <nav
       className={`
         ${styles.paddingX} w-full flex items-center oy-5 fixed top-0 p-8 mb-0
-        z-20 bg-black
+        z-20 bg-primary
       `}
     >
       <div
