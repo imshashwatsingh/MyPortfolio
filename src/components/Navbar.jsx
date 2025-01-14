@@ -46,10 +46,20 @@ const Navbar = () => {
                 active === link.title ? "text-white" : "text-secondary"
               } hover:text-white text-[18px] font-medium cursor-pointer`}
               onClick={() => setActive(link.title)}
+              href={link.id === "github"? link.link: "www.github.com/imshashwatsingh"}
             >
               <a href={`#${link.id}`}>{link.title}</a>
             </li>
           ))}
+           {/* <li
+              key="GitHub"
+              className={`${
+                active === "GitHub" ? "text-white" : "text-secondary"
+              } hover:text-white text-[18px] font-medium cursor-pointer`}
+              onClick={() => setActive("GitHub")}
+            >
+              <a href="https://github.com/imshashwatsingh">GitHub</a>
+            </li> */}
         </ul>
 
         <div className="sm:hidden flex flex-1 justify-end items-center">
@@ -82,7 +92,17 @@ const Navbar = () => {
                 >
                   <a href={`#${link.id}`}>{link.title}</a>
                 </li>
+
               ))}
+              {/* <li
+              key="GitHub"
+              className={`${
+                active === "GitHub" ? "text-white" : "text-secondary"
+              } font-poppins font-medium cursor-pointer text-[16px]`}
+              onClick={() =>{ setActive("GitHub"); }}
+            >
+              <a target="_blank" rel="noreferrer noopener" href="https://github.com/imshashwatsingh">GitHub</a>
+            </li> */}
             </ul>
           </div>
         </div>

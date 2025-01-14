@@ -46,6 +46,10 @@ export const navLinks = [
     id: "contact",
     title: "Contact",
   },
+  {
+    id: "github",
+    link: "www.google.com"
+  }
 ];
 
 const services = [
