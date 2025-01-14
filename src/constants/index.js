@@ -1,4 +1,5 @@
 import {
+  githublogo,
   pass1,
   mobile,
   drums,
@@ -46,10 +47,6 @@ export const navLinks = [
     id: "contact",
     title: "Contact",
   },
-  {
-    id: "github",
-    link: "www.google.com"
-  }
 ];
 
 const services = [
@@ -77,6 +74,15 @@ const services = [
   //   title: "Teacher",
   //   icon: backend,
   // },
+];
+
+const profiles = [
+  {
+    id : "github",
+    title : "GitHub",
+    icon : githublogo,
+    src : "https://github.com/imshashwatsingh"
+  }
 ];
 
 const technologies = [
@@ -281,4 +287,4 @@ const projects = [
   // },
 ];
 
-export { services, technologies, experiences, testimonials, projects };
+export { services, technologies, experiences, testimonials, projects , profiles};

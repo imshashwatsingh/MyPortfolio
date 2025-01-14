@@ -1,7 +1,7 @@
 import React, { act, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { styles } from "../styles";
-import { navLinks } from "../constants";
+import { navLinks, profiles } from "../constants";
 import { logo, menu, close } from "../assets";
 
 const Navbar = () => {
@@ -28,13 +28,11 @@ const Navbar = () => {
             window.scrollTo(0, 0);
           }}
         >
-          <img
-            src={logo}
-            alt="logo"
-            className="w-9 h-9 object-contain"
-          />
-          <p className="text-white text-[18px] font-bold
-              cursor-pointer flex">
+          <img src={logo} alt="logo" className="w-9 h-9 object-contain" />
+          <p
+            className="text-white text-[18px] font-bold
+              cursor-pointer flex"
+          >
             Shashwat Singh &nbsp;
           </p>
         </Link>
@@ -46,20 +44,22 @@ const Navbar = () => {
                 active === link.title ? "text-white" : "text-secondary"
               } hover:text-white text-[18px] font-medium cursor-pointer`}
               onClick={() => setActive(link.title)}
-              href={link.id === "github"? link.link: "www.github.com/imshashwatsingh"}
             >
               <a href={`#${link.id}`}>{link.title}</a>
             </li>
           ))}
-           {/* <li
-              key="GitHub"
+          {profiles.map((link) => (
+            <li
+              key={link.id}
               className={`${
-                active === "GitHub" ? "text-white" : "text-secondary"
+                active === link.title ? "text-white" : "text-secondary"
               } hover:text-white text-[18px] font-medium cursor-pointer`}
-              onClick={() => setActive("GitHub")}
             >
-              <a href="https://github.com/imshashwatsingh">GitHub</a>
-            </li> */}
+              <a target="_blank" rel="noreferrer noopener" href={link.src}>
+                {link.title}
+              </a>
+            </li>
+          ))}
         </ul>
 
         <div className="sm:hidden flex flex-1 justify-end items-center">
@@ -76,9 +76,11 @@ const Navbar = () => {
             z-10 rounded-xl 
           `}
           >
-            <ul className="list-none
+            <ul
+              className="list-none
              flex justify-end items-start
-             flex-col gap-4">
+             flex-col gap-4"
+            >
               {navLinks.map((link) => (
                 <li
                   key={link.id}
@@ -92,17 +94,21 @@ const Navbar = () => {
                 >
                   <a href={`#${link.id}`}>{link.title}</a>
                 </li>
-
               ))}
-              {/* <li
-              key="GitHub"
-              className={`${
-                active === "GitHub" ? "text-white" : "text-secondary"
-              } font-poppins font-medium cursor-pointer text-[16px]`}
-              onClick={() =>{ setActive("GitHub"); }}
-            >
-              <a target="_blank" rel="noreferrer noopener" href="https://github.com/imshashwatsingh">GitHub</a>
-            </li> */}
+              {profiles.map((link) => (
+                <li
+                  key={link.id}
+                  className={`${
+                    active === link.title ? "text-white" : "text-secondary"
+                  }font-poppins font-medium cursor-pointer text-[16px]`}
+                  onClick={() => {
+                    // setToggle(!toggle);
+                    setActive(link.title);
+                  }}
+                >
+                  <a href={link.src}>{link.title}</a>
+                </li>
+              ))}
             </ul>
           </div>
         </div>

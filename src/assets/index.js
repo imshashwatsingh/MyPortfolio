@@ -28,6 +28,8 @@ import typescript from "./tech/typescript.png";
 import threejs from "./tech/threejs.svg";
 import sql from "./tech/postgresql.png";
 
+import githublogo from "./profiles/github.png";
+
 import meta from "./company/meta.png";
 import shopify from "./company/shopify.png";
 import starbucks from "./company/starbucks.png";
@@ -39,6 +41,7 @@ import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
 
 export {
+  githublogo,
   pass1,
   surveen,
   logo,
