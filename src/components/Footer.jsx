@@ -7,53 +7,23 @@ const profiles = [
 
 const Footer = () => {
   return (
-    <footer
-      className="bg-primary text-center py-6"
-      style={{
-        fontFamily: "Arial, sans-serif"
-      }}
-    >
-      <div
-        className="flex justify-center gap-8 mb-4"
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          gap: "20px",
-          flexWrap: "wrap",
-        }}
-      >
+    <footer className="bg-primary text-center py-6 text-white font-sans">
+      <div className="flex flex-wrap justify-center gap-6 mb-4">
         {profiles.map((profile, index) => (
           <a
             key={index}
             href={profile.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:underline text-lg font-medium transition duration-300 text-green-500"
-            style={{
-              color: "#fff",
-              fontSize: "18px",
-              fontWeight: "500",
-              textDecoration: "none",
-              transition: "color 0.3s",
-            }}
-            onMouseEnter={(e) => (e.target.style.color = "#22c55e")}
-            onMouseLeave={(e) => (e.target.style.color = "#fff")}
+            className="text-lg font-medium hover:transition duration-300 text-white hover:text-green-400"
           >
             {profile.name}
           </a>
         ))}
       </div>
-      <p
-        className="text-md mt-4 text-black"
-        style={{
-          margin: "10px 0",
-          color: "#fff",
-          fontSize: "16px",
-          padding: "0 20px",
-          lineHeight: "1.5",
-        }}
-      >
-        © {new Date().getFullYear()} Shashwat Singh. All rights reserved.
+      <p className="text-sm md:text-base mt-4 px-4 text-gray-400 leading-relaxed">
+        © {new Date().getFullYear()} Made with ❤️ by <a  target="_blank"
+            rel="noopener noreferrer" href={profiles[1].url} >Shashwat Singh</a>
       </p>
     </footer>
   );
