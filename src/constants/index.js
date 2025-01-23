@@ -82,6 +82,11 @@ const profiles = [
     title : "GitHub",
     icon : githublogo,
     src : "https://github.com/imshashwatsingh"
+  },
+  {
+    id:"linkedin",
+    title:"LinkedIn",
+    src : "https://linkedin.com/in/shashwat-singh14/"
   }
 ];
 

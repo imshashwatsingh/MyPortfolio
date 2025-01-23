@@ -5,6 +5,7 @@ import { navLinks, profiles } from "../constants";
 import { logo, menu, close } from "../assets";
 
 const Navbar = () => {
+  
   const [active, setActive] = useState("");
 
   const [toggle, setToggle] = useState(false);
@@ -61,6 +62,7 @@ const Navbar = () => {
             </li>
           ))}
         </ul>
+        
 
         <div className="sm:hidden flex flex-1 justify-end items-center">
           <img
